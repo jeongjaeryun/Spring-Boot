@@ -31,7 +31,7 @@
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 	</bean>
 
-	<!--mapper scan -->
+	<!--mapper scan 매퍼 위치 결정해줌-->
 	<mybatis-spring:scan base-package="com.yedam.app.**.mapper" />
 
 </beans>

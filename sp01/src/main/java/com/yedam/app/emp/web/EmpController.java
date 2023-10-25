@@ -32,7 +32,7 @@ public class EmpController { //Controller를 중심으로 잡고 jsp를 만들�
 		return "emp/empList"; //어떤 화면에 뿌려질지
 	}
 	
-	// 사원조회
+	// 사원 단건 조회
 	@GetMapping("empInfo")
 	public String getEmpInfo(EmpVO empVO, Model model) {
 		EmpVO findVO = empService.getEmpInfo(empVO);
@@ -77,7 +77,7 @@ public class EmpController { //Controller를 중심으로 잡고 jsp를 만들�
 	
 	// 삭제
 	@GetMapping("empDelete")
-	public String empDeleteProcess(@RequestParam Integer employeeId,
+	public String empDeleteProcess(@RequestParam Integer employeeId, //컨트롤러를 구성하는 매개변수. requestParam()안에 name, value가 없으니 employeeId가 변수명. 기본타입쓰지말고 class타입 쓰기 ex) Integer 
 									RedirectAttributes ratt) {
 		boolean result = empService.deleteEmpInfo(employeeId);
 		String msg = null;

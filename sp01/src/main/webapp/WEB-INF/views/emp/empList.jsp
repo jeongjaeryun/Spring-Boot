@@ -29,6 +29,7 @@ table, th, td {
 			</tr>
 		</thead>
 		<tbody>
+	 <%-- ${} EL 태그, 변수값을 불러옴  --%>
 		<c:forEach var="info" items="${empList}" varStatus="sts">
 			<tr onclick="location.href='empInfo?employeeId=${info.employeeId}'">
 				<td>${sts.count}</td>
@@ -45,5 +46,12 @@ table, th, td {
 			</c:forEach>
 		</tbody>
 	</table>
+	<script>
+	  // JSP -> Servelt -> java => html -> css -> javascript 순으로 컴파일이 일어남
+	  let result = `${result }`;
+	  if(result != ''){
+	  	alert(result); 
+	  }
+	</script>
 </body>
 </html>
