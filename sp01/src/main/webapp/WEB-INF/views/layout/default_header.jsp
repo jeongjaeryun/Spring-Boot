@@ -12,6 +12,9 @@
     <a class="nav-link" href="${pageContext.request.contextPath }/empInsert">사원정보등록</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    <a class="nav-link" href="${pageContext.request.contextPath }/boardList">익명 게시판 조회</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="${pageContext.request.contextPath }/boardInsert">익명 게시글 등록</a>
   </li>
 </ul>
